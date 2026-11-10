@@ -1,0 +1,474 @@
+{
+  "schema_version": "1.0",
+  "context": {
+    "source": "anaplan-fpa-demo (synthetic)",
+    "fiscal_period": "FY2026 Q3",
+    "currency": "USD",
+    "versions": {
+      "plan": "FY26 Budget",
+      "actual": "Actuals"
+    },
+    "filters": {
+      "region": "EMEA"
+    },
+    "periods": [
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "rows_analysed": 108,
+    "rows_rejected": 0,
+    "input_truncated": false,
+    "variance_convention": "variance = actual - plan; positive = over plan (overspend for opex)"
+  },
+  "totals": {
+    "plan": 6052580,
+    "actual": 6345517,
+    "variance": 292937,
+    "variance_pct": 4.8
+  },
+  "breakdowns": {
+    "by_region": [
+      {
+        "region": "EMEA",
+        "plan": 6052580,
+        "actual": 6345517,
+        "variance": 292937,
+        "variance_pct": 4.8
+      }
+    ],
+    "by_department": [
+      {
+        "department": "Marketing",
+        "plan": 1562604,
+        "actual": 1752681,
+        "variance": 190077,
+        "variance_pct": 12.2
+      },
+      {
+        "department": "IT",
+        "plan": 897555,
+        "actual": 973383,
+        "variance": 75828,
+        "variance_pct": 8.4
+      },
+      {
+        "department": "Sales",
+        "plan": 1478328,
+        "actual": 1507649,
+        "variance": 29321,
+        "variance_pct": 2.0
+      },
+      {
+        "department": "G&A",
+        "plan": 579778,
+        "actual": 581003,
+        "variance": 1225,
+        "variance_pct": 0.2
+      },
+      {
+        "department": "R&D",
+        "plan": 1534315,
+        "actual": 1530801,
+        "variance": -3514,
+        "variance_pct": -0.2
+      }
+    ],
+    "by_account": [
+      {
+        "account": "Events",
+        "plan": 251704,
+        "actual": 439763,
+        "variance": 188059,
+        "variance_pct": 74.7
+      },
+      {
+        "account": "Software Licenses",
+        "plan": 134337,
+        "actual": 226991,
+        "variance": 92654,
+        "variance_pct": 69.0
+      },
+      {
+        "account": "Travel & Entertainment",
+        "plan": 137431,
+        "actual": 159949,
+        "variance": 22518,
+        "variance_pct": 16.4
+      },
+      {
+        "account": "Commissions",
+        "plan": 400829,
+        "actual": 406327,
+        "variance": 5498,
+        "variance_pct": 1.4
+      },
+      {
+        "account": "Digital Advertising",
+        "plan": 409351,
+        "actual": 413418,
+        "variance": 4067,
+        "variance_pct": 1.0
+      },
+      {
+        "account": "Facilities",
+        "plan": 87716,
+        "actual": 88813,
+        "variance": 1097,
+        "variance_pct": 1.3
+      },
+      {
+        "account": "Hardware",
+        "plan": 70173,
+        "actual": 70399,
+        "variance": 226,
+        "variance_pct": 0.3
+      },
+      {
+        "account": "Professional Fees",
+        "plan": 43003,
+        "actual": 42777,
+        "variance": -226,
+        "variance_pct": -0.5
+      },
+      {
+        "account": "Cloud Hosting",
+        "plan": 329300,
+        "actual": 328187,
+        "variance": -1113,
+        "variance_pct": -0.3
+      },
+      {
+        "account": "Contractors",
+        "plan": 209027,
+        "actual": 206929,
+        "variance": -2098,
+        "variance_pct": -1.0
+      },
+      {
+        "account": "Salaries",
+        "plan": 3979709,
+        "actual": 3961964,
+        "variance": -17745,
+        "variance_pct": -0.4
+      }
+    ],
+    "by_period": [
+      {
+        "period": "2026-07",
+        "plan": 2024262,
+        "actual": 2021293,
+        "variance": -2969,
+        "variance_pct": -0.1
+      },
+      {
+        "period": "2026-08",
+        "plan": 2006759,
+        "actual": 2208683,
+        "variance": 201924,
+        "variance_pct": 10.1
+      },
+      {
+        "period": "2026-09",
+        "plan": 2021559,
+        "actual": 2115541,
+        "variance": 93982,
+        "variance_pct": 4.6
+      }
+    ]
+  },
+  "drivers": {
+    "overspend": [
+      {
+        "cost_center": "EMEA-MKT-02",
+        "cost_center_name": "EMEA Field Marketing",
+        "region": "EMEA",
+        "department": "Marketing",
+        "account": "Events",
+        "plan": 70638,
+        "actual": 256507,
+        "variance": 185869,
+        "variance_pct": 263.1,
+        "pattern": "one_off",
+        "peak_period": "2026-08",
+        "share_of_net_variance_pct": 63.5
+      },
+      {
+        "cost_center": "EMEA-IT-01",
+        "cost_center_name": "EMEA IT Infrastructure",
+        "region": "EMEA",
+        "department": "IT",
+        "account": "Software Licenses",
+        "plan": 79486,
+        "actual": 171705,
+        "variance": 92219,
+        "variance_pct": 116.0,
+        "pattern": "one_off",
+        "peak_period": "2026-09",
+        "share_of_net_variance_pct": 31.5
+      },
+      {
+        "cost_center": "EMEA-SAL-03",
+        "cost_center_name": "EMEA Sales Operations",
+        "region": "EMEA",
+        "department": "Sales",
+        "account": "Travel & Entertainment",
+        "plan": 52358,
+        "actual": 75919,
+        "variance": 23561,
+        "variance_pct": 45.0,
+        "pattern": "run_rate",
+        "peak_period": "2026-07",
+        "share_of_net_variance_pct": 8.0
+      },
+      {
+        "cost_center": "EMEA-SAL-01",
+        "cost_center_name": "EMEA Enterprise Sales",
+        "region": "EMEA",
+        "department": "Sales",
+        "account": "Commissions",
+        "plan": 140537,
+        "actual": 146344,
+        "variance": 5807,
+        "variance_pct": 4.1,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-07",
+        "share_of_net_variance_pct": 2.0
+      },
+      {
+        "cost_center": "EMEA-RD-03",
+        "cost_center_name": "EMEA Data Science",
+        "region": "EMEA",
+        "department": "R&D",
+        "account": "Salaries",
+        "plan": 338570,
+        "actual": 344016,
+        "variance": 5446,
+        "variance_pct": 1.6,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-08",
+        "share_of_net_variance_pct": 1.9
+      }
+    ],
+    "underspend": [
+      {
+        "cost_center": "EMEA-IT-01",
+        "cost_center_name": "EMEA IT Infrastructure",
+        "region": "EMEA",
+        "department": "IT",
+        "account": "Salaries",
+        "plan": 389390,
+        "actual": 374262,
+        "variance": -15128,
+        "variance_pct": -3.9,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-07",
+        "share_of_net_variance_pct": -5.2
+      },
+      {
+        "cost_center": "EMEA-SAL-02",
+        "cost_center_name": "EMEA Mid-Market Sales",
+        "region": "EMEA",
+        "department": "Sales",
+        "account": "Salaries",
+        "plan": 268567,
+        "actual": 261818,
+        "variance": -6749,
+        "variance_pct": -2.5,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-07",
+        "share_of_net_variance_pct": -2.3
+      },
+      {
+        "cost_center": "EMEA-RD-01",
+        "cost_center_name": "EMEA Platform Engineering",
+        "region": "EMEA",
+        "department": "R&D",
+        "account": "Salaries",
+        "plan": 315754,
+        "actual": 311380,
+        "variance": -4374,
+        "variance_pct": -1.4,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-08",
+        "share_of_net_variance_pct": -1.5
+      },
+      {
+        "cost_center": "EMEA-MKT-01",
+        "cost_center_name": "EMEA Brand Marketing",
+        "region": "EMEA",
+        "department": "Marketing",
+        "account": "Salaries",
+        "plan": 339228,
+        "actual": 335967,
+        "variance": -3261,
+        "variance_pct": -1.0,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-07",
+        "share_of_net_variance_pct": -1.1
+      },
+      {
+        "cost_center": "EMEA-IT-02",
+        "cost_center_name": "EMEA Business Applications",
+        "region": "EMEA",
+        "department": "IT",
+        "account": "Salaries",
+        "plan": 303655,
+        "actual": 301731,
+        "variance": -1924,
+        "variance_pct": -0.6,
+        "pattern": "within_tolerance",
+        "peak_period": "2026-07",
+        "share_of_net_variance_pct": -0.7
+      }
+    ]
+  },
+  "concentration": {
+    "lines_total": 36,
+    "lines_over_plan": 20,
+    "lines_under_plan": 16,
+    "gross_overspend": 332155,
+    "gross_underspend": -39218,
+    "top_5_share_of_gross_overspend_pct": 94.2
+  },
+  "outliers": {
+    "threshold_pct": 15.0,
+    "count": 5,
+    "rows": [
+      {
+        "period": "2026-08",
+        "cost_center": "EMEA-MKT-02",
+        "cost_center_name": "EMEA Field Marketing",
+        "account": "Events",
+        "plan": 23857,
+        "actual": 208857,
+        "variance": 185000,
+        "variance_pct": 775.5
+      },
+      {
+        "period": "2026-09",
+        "cost_center": "EMEA-IT-01",
+        "cost_center_name": "EMEA IT Infrastructure",
+        "account": "Software Licenses",
+        "plan": 26227,
+        "actual": 118227,
+        "variance": 92000,
+        "variance_pct": 350.8
+      },
+      {
+        "period": "2026-07",
+        "cost_center": "EMEA-SAL-03",
+        "cost_center_name": "EMEA Sales Operations",
+        "account": "Travel & Entertainment",
+        "plan": 17933,
+        "actual": 26003,
+        "variance": 8070,
+        "variance_pct": 45.0
+      },
+      {
+        "period": "2026-08",
+        "cost_center": "EMEA-SAL-03",
+        "cost_center_name": "EMEA Sales Operations",
+        "account": "Travel & Entertainment",
+        "plan": 17290,
+        "actual": 25070,
+        "variance": 7780,
+        "variance_pct": 45.0
+      },
+      {
+        "period": "2026-09",
+        "cost_center": "EMEA-SAL-03",
+        "cost_center_name": "EMEA Sales Operations",
+        "account": "Travel & Entertainment",
+        "plan": 17135,
+        "actual": 24846,
+        "variance": 7711,
+        "variance_pct": 45.0
+      }
+    ],
+    "truncated": false
+  },
+  "histogram": {
+    "metric": "variance_pct",
+    "unit": "percent of plan",
+    "granularity": "one observation per row (cost center x account x period)",
+    "bin_rule": "lower <= x < upper; first and last bins are open-ended",
+    "bins": [
+      {
+        "label": "< -20%",
+        "lower": null,
+        "upper": -20.0,
+        "count": 0,
+        "variance_sum": 0
+      },
+      {
+        "label": "-20% to -10%",
+        "lower": -20.0,
+        "upper": -10.0,
+        "count": 0,
+        "variance_sum": 0
+      },
+      {
+        "label": "-10% to -5%",
+        "lower": -10.0,
+        "upper": -5.0,
+        "count": 3,
+        "variance_sum": -18125
+      },
+      {
+        "label": "-5% to 0%",
+        "lower": -5.0,
+        "upper": 0.0,
+        "count": 52,
+        "variance_sum": -48553
+      },
+      {
+        "label": "0% to 5%",
+        "lower": 0.0,
+        "upper": 5.0,
+        "count": 46,
+        "variance_sum": 51169
+      },
+      {
+        "label": "5% to 10%",
+        "lower": 5.0,
+        "upper": 10.0,
+        "count": 2,
+        "variance_sum": 7885
+      },
+      {
+        "label": "10% to 20%",
+        "lower": 10.0,
+        "upper": 20.0,
+        "count": 0,
+        "variance_sum": 0
+      },
+      {
+        "label": "20% to 50%",
+        "lower": 20.0,
+        "upper": 50.0,
+        "count": 3,
+        "variance_sum": 23561
+      },
+      {
+        "label": ">= 50%",
+        "lower": 50.0,
+        "upper": null,
+        "count": 2,
+        "variance_sum": 277000
+      }
+    ],
+    "observations": 108,
+    "excluded_zero_plan": 0,
+    "ascii": "      < -20% |  0\n-20% to -10% |  0\n -10% to -5% | ## 3\n   -5% to 0% | ############################## 52\n    0% to 5% | ########################### 46\n   5% to 10% | # 2\n  10% to 20% |  0\n  20% to 50% | ## 3\n      >= 50% | # 2"
+  },
+  "headline_facts": [
+    "Total: actual 6.35M USD vs plan 6.05M USD, variance +293K USD (+4.8%).",
+    "The top 5 overspending lines (of 20 over plan) account for 94% of gross overspend.",
+    "EMEA Field Marketing (EMEA-MKT-02) / Events: +186K USD (+263.1%), pattern one_off, peak 2026-08.",
+    "EMEA IT Infrastructure (EMEA-IT-01) / Software Licenses: +92K USD (+116.0%), pattern one_off, peak 2026-09.",
+    "EMEA Sales Operations (EMEA-SAL-03) / Travel & Entertainment: +24K USD (+45.0%), pattern run_rate, peak 2026-07.",
+    "Largest underspend: EMEA IT Infrastructure (EMEA-IT-01) / Salaries: -15K USD (-3.9%), pattern within_tolerance."
+  ],
+  "rejected_rows": []
+}
