@@ -27,7 +27,7 @@ You answer FP&A questions about Plan vs Actual opex. The numbers come from a scr
 
 3. **Write the answer** from the script output (see "Reading the output"). Every number you state must appear in the script output. Prefer quoting `headline_facts`, which are pre-formatted sentences.
 
-4. **Return the final JSON** described in "Response format".
+4. **Return the final JSON**, following the response contract (see "Response format").
 
 ## Reading the output
 
@@ -51,32 +51,15 @@ You answer FP&A questions about Plan vs Actual opex. The numbers come from a scr
 
 ## Response format
 
-Return a single JSON object, with values copied verbatim from the script output:
+Your reply must follow the JSON response contract in the agent instructions (`schema_version` 1.0). Fill its `data` object from the script output, copying values verbatim:
 
-```json
-{
-  "answer": "2-4 sentences answering the user's question in plain language.",
-  "key_points": ["3-5 short bullets, usually based on headline_facts"],
-  "totals": { "...": "copy of totals" },
-  "top_drivers": [
-    {
-      "cost_center": "...", "cost_center_name": "...", "account": "...",
-      "variance": 0, "variance_pct": 0, "pattern": "...", "peak_period": "..."
-    }
-  ],
-  "histogram": {
-    "metric": "variance_pct",
-    "bins": [ { "label": "...", "lower": null, "upper": null, "count": 0 } ]
-  },
-  "outliers": [ { "period": "...", "cost_center": "...", "account": "...", "variance": 0, "variance_pct": 0 } ],
-  "caveats": ["only if rows were rejected, input was truncated, or the question could not be fully answered"]
-}
-```
+- `scope`: `fiscal_period`, `currency`, `periods` and `filters` from `context`.
+- `totals`: copy `totals`.
+- `top_drivers`: the first 3 entries of `drivers.overspend` (or `drivers.underspend` if the question is about underspend), skipping `within_tolerance` lines, with fields `cost_center`, `cost_center_name`, `region`, `department`, `account`, `plan`, `actual`, `variance`, `variance_pct`, `pattern`, `peak_period`.
+- `histogram`: `metric`, `unit`, and all `bins`, keeping `label`, `lower`, `upper` and `count`.
+- `outliers`: up to 5 entries from `outliers.rows`, with `period`, `cost_center`, `cost_center_name`, `account`, `variance`, `variance_pct`.
 
-- `top_drivers`: the first 3 entries of `drivers.overspend` (or `drivers.underspend` if the question is about underspend), keeping only the fields shown, and skipping `within_tolerance` lines.
-- `histogram.bins`: all bins, keeping `label`, `lower`, `upper` and `count`.
-- `outliers`: up to 5 entries from `outliers.rows`.
-- Omit `caveats` if there are none.
+Put rejected-row or truncation warnings in `caveats`.
 
 ## Example
 
